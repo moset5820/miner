@@ -431,7 +431,7 @@ check_meson_cdn_install(){
         echo "******************正在安装meson->cdn******************"
         wget  $MESON_CDN_BIN_URL -O meson_cdn-linux-amd64.tar.gz -O meson_cdn-linux-amd64.tar.gz&& tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f meson_cdn-linux-amd64.tar.gz && cd ./meson_cdn-linux-amd64 && sudo ./service install meson_cdn
         sleep 20
-        sudo ./meson_cdn config set --token=$meson_cdn_code --https_port=443 --cache.size=30        ./apphub status
+        sudo ./meson_cdn config set --token=$meson_cdn_code --https_port=443 --cache.size=150        ./apphub status
         sleep 20
         sudo ./service start meson_cdn
         echo "******************meson->CDN安装结束******************"
